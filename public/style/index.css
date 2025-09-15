@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Belanosima", sans-serif;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.screen {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(270deg, #000000, #0c0c0c, #111111, #1b1b1b, #222222);
+}
+
+.header{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header>div{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+#red{
+    background-color: #ff3030;
+}
+
+#blue{
+    background-color: #3030ff;
+}
+
+#yellow{
+    background-color: #ffff30;
+}
+
+#green{
+    background-color: #30ff30;
+}
+
+#orange{
+    background-color: #ff6530;
+    border: white 1px solid;
+}
+
+#violet{
+    background-color: #8d30ff;
+    margin-right: 1rem;
+}
+
+#red:hover, #blue:hover, #yellow:hover, #green:hover, #orange:hover, #violet:hover{
+    border: white 1px solid;
+}
+
+.main-area {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    gap: 2rem;
+}
+
+.heading {
+    color: white;
+    width: 30rem;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.heading>button{
+    background-color: #ff6530;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    padding: 12px;
+    margin-left: 5px;
+}
+
+.heading>h2>span {
+    color: #ff6530;
+}
+
+.card {
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.login-card,
+.signup-card {
+    background: rgba(128, 128, 128, 0.072);
+    height: 100%;
+    width: 400px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+    font-weight: 600;
+    padding-left: 15px;
+}
+
+.login-card{
+    height: 85%;
+}
+
+.login-card>h1 {
+    margin-bottom: 3rem;
+    margin-top: 15px;
+}
+
+.login-card>form,
+.signup-card>form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.login-card>form>label,
+.signup-card>form>label,
+form+p {
+    font-weight: 400;
+}
+
+.login-card>form>input,
+.signup-card>form>input {
+    width: 90%;
+    padding: 7px;
+    height: 28px;
+    margin-bottom: 15px;
+    background-color: #222222;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.login-card>form>label,
+.signup-card>form>label {
+    margin-bottom: 5px;
+}
+
+.login-card>form>button,
+.login-card>button,
+.signup-card>form>button,
+#goback {
+    margin-bottom: 40px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6530;
+    color: aliceblue;
+    padding: 7px;
+}
+
+.signup-card>form>button{
+    margin-bottom: 5px;
+}
+
+.signup-card {
+    display: none;
+}
+
+.signup-card>h1{
+    margin-top: 15px;
+    margin-bottom: 3rem;
+}
+
+@media(max-width: 930px){
+    html,
+    body {
+    height: 100%;
+    width: 100%;
+    }
+
+    .screen {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(270deg, #000000, #0c0c0c, #111111, #1b1b1b, #222222);
+    }
+
+    .main-area {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .heading {
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+    margin-inline-start: 100px;
+    }
+
+    .heading>button{
+        display: none;
+    }
+
+    .card {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .login-card,
+    .signup-card {
+    height: 100%;
+    width: 90%;
+}
+}
+
+@media(max-width: 350px){
+    .heading {
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    margin-inline-start: 170px;
+    }
+}
+
+button {
+    transition: all 0.2s ease-in-out;
+}
+
+#goback{
+    margin-top: 5px;
+    background-color: white;
+    color: black;
+}
+
+button:hover {
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+    filter: brightness(1.1);
+}
+

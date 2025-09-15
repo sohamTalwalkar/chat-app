@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+IE+Guides&family=Poppins:ital,wght@0,200;0,300;0,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+</head>
+</head>
+
+<body>
+    <div class="screen">
+        <div class="header">
+            <div id="red"></div>
+            <div id="blue"></div>
+            <div id="green"></div>
+            <div id="yellow"></div>
+            <div id="orange"></div>
+            <div id="violet"></div>
+        </div>
+        <div class="main-area">
+            <div class="heading">
+                <h2>Welcome to <span>Chat</span> App</h2>
+                <button class="signup">Sign Up</button>
+            </div>
+            <div class="card">
+                <div class="login-card">
+                    <h1>Login</h1>
+                    <form class="login-form">
+                        <label for="log-email">Enter your email ID:</label>
+                        <input id="log-email" placeholder="Enter email ID" name="email">
+                        <label for="log-password">Enter your password:</label>
+                        <input id="log-password" type="password" placeholder="Enter password" name="password">
+                        <button id="log-btn">Login</button>
+                    </form>
+                    <p>New to Chat App?</p>
+                    <button class="signup">Sign Up</button>
+                </div>
+                <div class="signup-card">
+                    <h1>Sign Up</h1>
+                    <form class="signup-form">
+                        <label for="name">Enter your name:</label>
+                        <input id="name" placeholder="Enter your name" name="name">
+                        <label for="email">Enter your email ID:</label>
+                        <input id="email" placeholder="Enter email ID" name="email">
+                        <label for="password">Set your password:</label>
+                        <input id="password" type="password" placeholder="password" name="password">
+                        <label for="re-password">Re-enter the password:</label>
+                        <input id="re-password" type="password" placeholder="Re-enter password">
+                        <button id="do-signup">Create an account</button>
+                    </form>
+                    <button id="goback">Go back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/script/mainIndex.js"></script>
+</body>
+
+</html>

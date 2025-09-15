@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/chat.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+IE+Guides&family=Poppins:ital,wght@0,200;0,300;0,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="area">
+        <div class="contact">
+            <div class="contact-head">
+                <div class="contact-head-profile">
+                    <div class="profile-photo">
+                        <img src="<%= (result.dp)? result.dp : '/default/Unknown_person.jpg' %>" />
+                        <div class="name-number">
+                            <h3 id="user-name">
+                                <%= result.name %>
+                            </h3>
+                            <p id="user-email">
+                                <%= result.email %>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile-settings">
+                        <i class="fa-solid fa-gear" id="go-to-settings"></i>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+                <div class="contact-head-options">
+                    <div class="people-groups">
+                        <div class="people">People</div>
+                        <div class="groups">Groups</div>
+                    </div>
+                    <div class="search-in" style="display: none;">
+                        <input placeholder="Search for people or groups" id="search-input">
+                        <button id="enter-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button id="go-back">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-people">
+                <div class="default-contact">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="search-contact" style="display: none;"></div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="chat-header">
+                <div class="back-to-contacts">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="profile-img"></div>
+                <div class="contact-name"></div>
+            </div>
+            <div class="chat-body"
+                style="background-image: url('<%= (result.bgImage)?result.bgImage:`/default/rajasthan_orange.jpg` %>');">
+            </div>
+            <div class="chat-footer">
+                <div class="chat-footer-emoji">
+                    <i class="fa-regular fa-face-smile" id="emoji"></i>
+                </div>
+                <div class="chat-footer-attachment">
+                    <input type="file" accept=".jpg,.jpeg,.png,.pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,audio/*,video/*"
+                        style="display: none;">
+                    <i class="fa-solid fa-paperclip" id="attachment"></i>
+                </div>
+                <div class="chat-footer-type">
+                    <input placeholder="Type a message" id="message-input">
+                </div>
+                <div class="chat-footer-send">
+                    <i class="fa-solid fa-paper-plane" id="send"></i>
+                </div>
+            </div>
+        </div>
+        <div class="settings" style="display: none;">
+            <div class="settings-area">
+                <h1 style="font-size: 50px; margin-bottom: 40px;">Settings</h1>
+                <div class="profile-photo-div">
+                    <input type="file" accept=".jpg,.jpeg,.png" style="display: none;">
+                    <img src="<%= (result.dp)? result.dp : '/default/Unknown_person.jpg' %>">
+                </div>
+                <div class="profile-name-div">
+                    <p>
+                        <%= result.name %>
+                    </p>
+                    <i class="fa-solid fa-pencil"></i>
+                </div>
+                <div class="personalize-div">
+                    <p style="font-size: large; font-weight: 400;">Edit color theme:</p>
+                    <div class="personalize-colors">
+                        <div id="red"></div>
+                        <div id="blue"></div>
+                        <div id="green"></div>
+                        <div id="yellow"></div>
+                        <div id="orange"></div>
+                        <div id="violet"></div>
+                    </div>
+                    <div class="change-background-image">
+                        <p style="font-size: large; font-weight: 400;">Change background image:</p>
+                        <input type="file" accept=".jpg,.jpeg,.png" style="display: none;">
+                        <img src="<%= (result.bgImage)? result.bgImage:'/default/rajasthan_orange.jpg' %>">
+                        <div id="status"></div>
+                    </div>
+                </div>
+                <div class="log-out-div">
+                    <button>Log out</button>
+                </div>
+                <button id="back">Back</button>
+            </div>
+        </div>
+        <div class="alt-chat">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script/chat.js"></script>
+</body>
+
+</html>
