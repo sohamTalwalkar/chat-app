@@ -58,7 +58,12 @@ This project was developed to understand real-time systems, event-driven archite
 ![Login Screen](screenshots/login.png)
 
 ### Chat Interface
-![Chat UI](screenshots/chat-ui.png)
+
+#### Initial screen
+![Chat UI](screenshots/chat-ui-init.png)
+
+#### Screen when a chat is opened
+![Chat UI](screenshots/chat-ui-op.png)
 
 ### Profile & Theme Settings
 ![Settings](screenshots/settings.png)
